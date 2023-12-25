@@ -1,0 +1,575 @@
+Friday, July 24, 2020
+MOTHER’S GLOBAL SCHOOL COMPUTER SCIENCE SUMMER HOLIDAY HOMEWORK SIDDHANT BALI 12TH A ROLL NO.25
+File in PDF
+MOTHER’S GLOBAL SCHOOL
+COMPUTER SCIENCE
+SUMMER HOLIDAY 
+HOMEWORK
+SIDDHANT BALI
+12TH A
+ROLL NO.25
+DESIGN:
+(QUESTION NUMBER).
+#QUESTION
+SOURCE CODE
+OUTPUT
+1.
+#Write a program to calculate the mean of a given list of 
+numbers.
+n=int(input("range:"))
+j=0
+for i in range(n):
+ l=float(input("enter number:"))
+ j+=l
+mean=j/n
+print("mean:",mean)
+range:8
+enter number:2
+enter number:2
+enter number:2
+enter number:2
+enter number:2
+enter number:2
+enter number:2
+enter number:2.88
+mean: 2.11
+2.
+#Write a program to calculate the minimum element of 
+a given list of numbers.
+a=[148485,8496,1.5,5,5894]
+n=len(a)
+print(a) 
+for i in range(n-1):
+ for j in range(n-i-1):
+ if a[j]>a[j+1]:
+ a[j+1],a[j]=a[j],a[j+1]
+print("minimum element:",a[0])
+ 
+[148485, 8496, 1.5, 5, 5894]
+minimum element: 1.5
+3.
+#Write a code to calculate and display total marks and 
+percentage of a student from a given list storing the 
+marks of a student.
+n=int(input("RANGE:"))
+d1={}
+for i in range(n):
+ l1=[1,1,1,1,1]
+ a=str(input("Name:"))
+ b=input("Comp.Sci. Marks:")
+ c=input("Eng. Marks:")
+ d=input("Math. Marks:")
+ e=input("Phy. Marks:")
+ f=input("Chem. Marks:")
+ l1[0]=b
+ l1[1]=c
+ l1[2]=d
+ l1[3]=e
+ l1[4]=f
+ d1[a]=l1
+print(d1)
+q=1
+while q==1:
+ z=input("Do you want to see marks and percentage 
+of student Y/N:")
+ if z=="Y":
+ m=input("Enter name of student:")
+ 
+print("Marks","Cs:",d1[m][0],"Eng:",d1[m][1],"Math:",d
+1[m][2],"Phy:",d1[m][3],"Che:",d1[m][4])
+ 
+print("percentage:",(float(d1[m][0])+float(d1[m][1])+flo
+at(d1[m][2])+float(d1[m][3])+float(d1[m][4]))*100/500)
+ elif z=="N":
+ q=0
+RANGE:3
+Name:siddhant
+Comp.Sci. Marks:100
+Eng. Marks:100
+Math. Marks:100
+Phy. Marks:100
+Chem. Marks:100
+Name:arjun
+Comp.Sci. Marks:90
+Eng. Marks:90
+Math. Marks:90
+Phy. Marks:90
+Chem. Marks:90
+Name:drishti
+Comp.Sci. Marks:80
+Eng. Marks:80
+Math. Marks:80
+Phy. Marks:80
+Chem. Marks:80
+{'siddhant': ['100', '100', '100', '100', '100'], 'arjun': ['90', 
+'90', '90', '90', '90'], 'drishti': ['80', '80', '80', '80', '80']}
+Do you want to see marks and percentage of student 
+Y/N:Y
+Enter name of student:siddhant
+Marks Cs: 100 Eng: 100 Math: 100 Phy: 100 Che: 100
+percentage: 100.0
+Do you want to see marks and percentage of student 
+Y/N:N
+4.
+#Write a Program to multiply an element by 2 if it is an 
+odd index for a given list containing both numbers and 
+strings.
+l1=[8958,88.05623,"yvyh",1,"95"]
+print(l1)
+for i in range(len(l1)):
+ if (i%2)!=0:
+ l1[i]*=2
+print(l1)
+[8958, 88.05623, 'yvyh', 1, '95']
+[8958, 176.11246, 'yvyh', 2, '95']
+5.
+#Write a Program to count the frequency of an element 
+in a given list.
+l1=[]
+d={}
+n=int(input("enter the number of elemets:"))
+for i in range(0,n):
+ a=input("Enter the element:")
+ l1.append(a)
+print("list:",l1)
+for i in l1:
+ b=l1.count(i)
+ d[i]=b
+print("frequencies:",d)
+enter the number of elemets:4
+Enter the element:asa
+Enter the element:asd
+Enter the element:asa
+Enter the element:asa
+list: ['asa', 'asd', 'asa', 'asa']
+frequencies: {'asa': 3, 'asd': 1}
+6.
+#Write a Program to shift elements of a list so that the 
+first element moves to the second index and second 
+index moves to the third index, and so on, and the last 
+element shifts to the first position. Suppose the list is 
+[10,20,30,40] After shifting, it should look like: 
+[40,10,20,30]
+l1=[10,20,30,40]
+print(l1)
+l1.insert(0,l1[-1])
+l1.pop(-1)
+print("new list:",l1)
+[10, 20, 30, 40]
+new list:[40, 10, 20, 30]
+7.
+#A list Num contains the following elements:3, 25, 13, 6, 
+35, 8, 14, 45.Write a function to swap the content with 
+the next value divisible by 5 so that the.resultant list will 
+look like: 25, 3, 13, 35, 6, 8, 45, 14
+l1=[3, 25, 13, 6, 35, 8, 14, 45]
+k=0
+while k<len(l1):
+ if l1[k]%5==0:
+ l1[k-1],l1[k]=l1[k],l1[k-1]
+ k+=1
+ else:
+ k+=1
+print(l1)
+[25, 3, 13, 35, 6, 8, 45, 14]
+8.
+#Write a program to accept values from a user in a 
+tuple. Add a tuple to it and display its elements one by 
+one. Also display its maximum and minimum value.
+#tuple formation:
+t1=()
+n1=int(input("enter the no. of values:"))
+for i in range(n1):
+ j=input("enter element:")
+ t1+=(j,)
+print("your tuple",t1)
+#tuple element display
+print("tuple elements:")
+for i in t1:
+ print(i)
+#max and min:
+a=list(t1)
+n=len(a)
+for i in range(n-1):
+ for j in range(n-i-1):
+ if a[j]>a[j+1]:
+ a[j+1],a[j]=a[j],a[j+1]
+maximum_value=a[-1]
+minimum_value=a[0]
+print("maximum_value:",maximum_value)
+print("minimum_value:",minimum_value)
+enter the no. of values:4
+enter element:876
+enter element:5296.428
+enter element:48
+enter element:623
+your tuple ('876', '5296.428', '48', '623')
+tuple elements:
+876
+5296.428
+48
+623
+maximum_value: 876
+minimum_value: 48
+9.
+#Write a program to input any values for two tuples. 
+Print it, interchange it and then compare them.
+#tuple formation:
+t1=()
+n1=int(input("enter the no. of values for both tuple 1 & 
+tuple 2:"))
+for i1 in range(n1):
+ j1=input("enter element:")
+ t1+=(j1,)
+print("your tuple:",t1)
+#tuple formation:
+t2=()
+n2=n1
+for i2 in range(n2):
+ j2=input("enter element:")
+ t2+=(j2,)
+print("your tuple:",t2)
+t1, t2 = t2, t1
+print ("After swapping")
+print ("First tuple")
+print (t1)
+print ("Second tuple")
+print (t2)
+if t1>t2:
+ m="t1>t2"
+elif t1==t2:
+ m="t1=t2"
+elif t1<t2:
+ m="t1<t2"
+print("comparison:",m)
+enter the no. of values for both tuple 1 & tuple 2:4
+enter element:45
+enter element:asd
+enter element:4
+enter element:a
+your tuple: ('45', 'asd', '4', 'a')
+enter element:53
+enter element:5
+enter element:5
+enter element:5
+your tuple: ('53', '5', '5', '5')
+After swapping
+First tuple
+('53', '5', '5', '5')
+Second tuple
+('45', 'asd', '4', 'a')
+comparison: t1>t2
+10.
+#Write a Python program to input ‘n’ classes and names 
+of their class teachers to store them in a dictionary and 
+display the same. Also accept a particular class from the 
+user and display the name of the class teacher of that 
+class.
+d={}
+n=int(input("Enter the number of classes:"))
+for i in range(0,n):
+ a=input("Enter the name of class:")
+ b=input("Enter the name of class teacher:")
+ d[a]=b
+print(d)
+b=1
+while b==1:
+ c=input("do you want to see specific entry now 
+Y/N:")
+ if c=="Y":
+ f=input("the entry name you want to see:")
+ print(d[f])
+ elif c=="N":
+ b=0
+Enter the number of classes:4
+Enter the name of class:10
+Enter the name of class teacher:nidhi maam
+Enter the name of class:5
+Enter the name of class teacher:shapili maam
+Enter the name of class:7
+Enter the name of class teacher:corona maam
+Enter the name of class:5
+Enter the name of class teacher:modi maam
+{'10': 'nidhi maam', '5': 'modi maam', '7': 'corona 
+maam'}
+do you want to see specific entry now Y/N:Y
+the entry name you want to see:5
+modi maam
+do you want to see specific entry now Y/N:Y
+the entry name you want to see:7
+corona maam
+do you want to see specific entry now Y/N:N
+11.
+#Write a program to store student names and their 
+percentage in a dictionary and delete a particular 
+student name from the dictionary. Also display the 
+dictionary after deletion.
+d1={}
+n=int(input("no. of students:"))
+j=1
+while j<=n:
+ name=input("enter name:")
+ per=float(input("enter percentage:"))
+ d1[name]=per
+ j+=1
+print(d1)
+b=1
+while b==1:
+ c=input("do you want to delete entry now Y/N:")
+ if c=="Y":
+ a=input("the entry name you want to delete:")
+ d1.pop(a)
+ print(d1)
+ elif c=="N":
+ b=0
+no. of students:3
+enter name:siddhant
+enter percentage:100
+enter name:arjun
+enter percentage:100
+enter name:piyush jain
+enter percentage:100
+{'siddhant': 100.0, 'arjun': 100.0, 'piyush jain': 100.0}
+do you want to delete entry now Y/N:Y
+the entry name you want to delete:arjun
+{'siddhant': 100.0, 'piyush jain': 100.0}
+do you want to delete entry now Y/N:N
+12.
+#Write a Python program to input names of ‘n’ 
+customers and their details like items bought, cost and 
+phone number, etc., store them in a dictionary and 
+display all the details in a tabular form.
+e=dict()
+n=int(input("Enter the number of customers:"))
+for i in range(0,n):
+ l=[]
+ a=str(input("Enter the name of the customer:"))
+ b=str(input("Enter the name of item bought:"))
+ c=int(input("Enter the cost:"))
+ d=int(input("Enter the Phone number:"))
+ l.append(b)
+ l.append(c)
+ l.append(d)
+ e[a]=l
+print("Name\tItem\tCost\tPhone Number")
+for i in e:
+ print(i,"\t",e[i][0],"\t",e[i][1],"\t",e[i][2])
+Enter the number of customers:3
+Enter the name of the customer:a
+Enter the name of item bought:dahi
+Enter the cost:100
+Enter the Phone number:100
+Enter the name of the customer:arjun
+Enter the name of item bought:div
+Enter the cost:10000
+Enter the Phone number:10000
+Enter the name of the customer:sid
+Enter the name of item bought:mgs
+Enter the cost:1000000 
+Enter the Phone number:8076218888
+Name Item Cost Phone Number
+a dahi 100 100
+arjun div 10000 10000
+sid mgs 1000000 8076218888
+13.
+#Write a Python program to capitalize first and last 
+letters of each word of a given string.
+s1=str(input("Enter the string"))
+a=""
+l1=list(s1.split(" "))
+for i in l1:
+ if len(i)==1:
+ a+=i[0:1].upper()+" "
+ else:
+ a+=i[0:1].upper()+i[1:-1]+i[-1].upper()+" "
+print(a)
+Enter the stringa Quick brown 69 dog jump over 
+himalaya
+A QuicK BrowN 69 DoG JumP OveR HimalayA
+14.
+#Write a Python program to remove duplicate 
+characters of a given string.
+a=str(input("Enter the string:"))
+b=""
+l=[]
+for i in a:
+ if i not in l:
+ b+=i
+ l.append(i)
+print(b)
+Enter the string:HEllo World i am siddhant bali
+HElo Wrdiamshntb
+15.
+#Write a Python program to compute sum of digits of a 
+given string.
+s1=str(input("ENTER STRING:"))
+#process
+sums=0
+for i in s1:
+ if i.isdigit()==True:
+ sums+=int(i)
+print(sums)
+ENTER STRING:111111 cd sdlkvnj1111
+10
+16.
+#Write a Python program to find the second most 
+repeated word in a given string.
+a=str(input("Enter the string"))
+l=a.split(" ")
+d={}
+for i in l:
+ b=l.count(i)
+ d[b]=i
+c=list(d.keys())
+c.sort()
+z=c[1]
+print("the element which has occure second most times 
+is",d[z])
+Enter the stringA QuicK BrowN 69 DoG JumP OveR 
+HimalayA DoG DoG DoG DoG HimalayA
+the element which has occure second most times is 
+HimalayA
+17.
+#Write a Python program to change a given string to a 
+new string where the first and last chars have been 
+exchanged.
+a=str(input("Enter the string:"))
+b=len(a)
+c=a[-1]+a[1:(b-1)]+a[0]
+print(c)
+Enter the string:sansknsakd
+dansknsaks
+18.
+#Write a Python program to multiply all the items in a 
+list.
+l1=[1963,82,89.665,55,8,1]
+s=1
+for i in l1:
+ s*=i
+print(s)
+6350527211.6
+19.
+#Write a Python program to get the smallest number 
+from a list.
+n=int(input("Enter the number of elements:"))
+a=[]
+for i in range(0,n):
+ a1=float(input("Enter the element:"))
+ a.append(a1)
+#Bubble Sort
+n=len(a)
+print("LIST:",a) 
+for i in range(n-1):
+ for j in range(n-i-1):
+ if a[j]>a[j+1]:
+ a[j+1],a[j]=a[j],a[j+1]
+print("SMALLEST ELEMENT:",a[0])
+Enter the number of elements:6
+Enter the element:296.623
+Enter the element:26
+Enter the element:05
+Enter the element:5
+Enter the element:5
+Enter the element:6
+LIST: [296.623, 26.0, 5.0, 5.0, 5.0, 6.0]
+SMALLEST ELEMENT: 5.0
+20.
+#Write a Python program to append a list to the second 
+list.
+l1=[1,96,9,8,1,2,3,0,4,7,5,60,4]
+l2=[1963,82,89.665,55,8,1]
+print('first list:',l1)
+print('second list:',l2)
+for i in l1:
+ l2.append(i)
+print("now second list is:",l2)
+first list: [1, 96, 9, 8, 1, 2, 3, 0, 4, 7, 5, 60, 4]
+second list: [1963, 82, 89.665, 55, 8, 1]
+now second list is: [1963, 82, 89.665, 55, 8, 1, 1, 96, 9, 8, 
+1, 2, 3, 0, 4, 7, 5, 60, 4]
+21.
+#Write a Python program to generate and print a list of 
+first and last 5 elements where the values are square of 
+numbers between 1 and 30 (both included).
+n=int(input("Range:"))
+l1=[]
+for i in range(0,n):
+ if i*i>=1 and i*i<=n:
+ l1.append(i)
+print(l1)
+print("First 5 numbers are",l1[0:5])
+print("Last 5 numbers are",l1[-1:-6:-1])
+Range:30
+[1, 2, 3, 4, 5]
+First 5 numbers are [1, 2, 3, 4, 5]
+Last 5 numbers are [5, 4, 3, 2, 1]
+22.
+#Write a Python program to get unique values from a 
+list.
+n=int(input("Enter the number of elements:"))
+a=[]
+for i in range(0,n):
+ a1=input("Enter the element:")
+ a.append(a1)
+print("ACTUAL LIST:",a)
+l=[]
+for i in a:
+ if i not in l:
+ l.append(i)
+print("LIST HAVING UNIQUE ELEMENTS:",l)
+Enter the number of elements:6
+Enter the element:ASD
+Enter the element:ADS
+Enter the element:ASD
+Enter the element:ASD
+Enter the element:FGH
+Enter the element:FGH
+ACTUAL LIST: ['ASD', 'ADS', 'ASD', 'ASD', 'FGH', 'FGH']
+LIST HAVING UNIQUE ELEMENTS: ['ASD', 'ADS', 'FGH']
+23.
+#Write a Python program to convert a string to a list.
+l1=[]
+a=str(input("Enter the STRING:"))
+l1.extend(a)
+print(l1)
+Enter the STRING:SDASCDASKU KJNJSADA5662465
+['S', 'D', 'A', 'S', 'C', 'D', 'A', 'S', 'K', 'U', ' ', 'K', 'J', 'N', 'J', 'S', 
+'A', 'D', 'A', '5', '6', '6', '2', '4', '6', '5']
+24.
+#Write a Python script to concatenate the following 
+dictionaries to create a new one: d1 = {'A':1, 'B':2, 'C':3} 
+d2 = {'D':4} Output should be: {'A':1, 'B':2, 'C':3, 'D':4}
+d1={'A':1,'B':2,'C':3}
+d2={'D':4}
+for i in d2:
+ d1[i]=d2[i]
+print("The new list is",d1)
+The new list is {'A': 1, 'B': 2, 'C': 3, 'D': 4}
+25.
+#Write a Python script to check if a given key already 
+exists in a dictionary.
+n=int(input("Enter the number of elements:"))
+di={}
+for i in range(0,n):
+ a=input("Enter the element:")
+ b=input("Enter the value:")
+ di[a]=b
+d=list(di.keys())
+a=input("Enter the key:")
+if a in d:
+ print("The given key exists")
+else:
+ print("The given key is INVAILD")
+Enter the number of elements:5
+Enter the element:S
+Enter the value:A
+Enter the element:SA
+Enter the value:AS
+Enter the element:AS
+Enter the value:AAS
+Enter the element:ASS
+Enter the value:AAS
+Enter the element:FF
+Enter the value:DDF
+Enter the key:S
+The given key exists
