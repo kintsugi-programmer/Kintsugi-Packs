@@ -364,10 +364,8 @@ def eleven():
 
 #CLOSE PROGRAM
 
-def closeproj: 
-
+def closeproj(): 
         mycon.close()
-
         if not mycon.is_connected():
 
                 print("THANK YOU FOR USING THIS PROGRAM !!!!")
